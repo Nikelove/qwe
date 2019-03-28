@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			
+			#box{
+				width: 200px;
+				height: 200px;
+				background-color: gray;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<input value="请输入账号"/>
+		<div id="box">
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("input").on("blur",function(){
+				$("input").val("请输入账号");0
+			});
+			
+			$("input").on("focus",function(){
+				$("input").val("");
+			});
+			
+			$("body").on("mousemove",function(event){
+			event=event||window.event;
+			var targetx=event.clientX-100;
+			var targety=event.clientY-100;
+			$("#box").css("left",targetx);
+			$("#box").css("top",targety);
+			}); 	
+		})
+
+
+		
+		
+	</script>
+</html>
